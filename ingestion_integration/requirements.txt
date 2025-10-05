@@ -2,3 +2,4 @@ google-cloud-firestore==2.15.0
 psycopg[binary]==3.2.10
 python-dotenv==1.0.1
 python-dateutil==2.9.0.post0
+streamlit
