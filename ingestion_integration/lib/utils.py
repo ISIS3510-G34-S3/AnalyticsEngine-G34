@@ -10,3 +10,15 @@ def to_utc(ts):
 
 def to_text_array(seq):
     return list(seq or [])
+
+def ref_to_id(v):
+
+    if isinstance(v, str):
+        return v
+    
+    if hasattr(v, "id"):
+        try:
+            return v.id  
+        except Exception:
+            pass
+    return v 

@@ -5,7 +5,7 @@ from ingestion_integration.lib.pg import (
     set_highwater,  # <-- make sure this is imported
 )
 from ingestion_integration.lib.fs import stream_collection
-from ingestion_integration.lib.utils import to_utc
+from ingestion_integration.lib.utils import to_utc, ref_to_id
 
 UPSERT_SQL = """
 INSERT INTO fact_booking (
@@ -41,8 +41,8 @@ def run():
     for doc in docs:
         d = doc.to_dict() or {}
         created = to_utc(d.get("createdAt"))
-        exp_id = d.get("expId")
-        host_id = d.get("hostId")
+        exp_id = ref_to_id(d.get("expId"))
+        host_id = ref_to_id(d.get("hostId"))
 
         # Minimal validation: we need exp_id, host_id, created
         if not exp_id or not host_id or created is None:

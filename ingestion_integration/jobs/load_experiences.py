@@ -3,6 +3,7 @@ from datetime import datetime, timezone
 from ingestion_integration.lib.pg import get_conn, upsert_many
 from ingestion_integration.lib.fs import stream_collection
 from ingestion_integration.lib.utils import to_utc, to_text_array
+from ingestion_integration.lib.utils import to_utc, to_text_array, ref_to_id
 
 UPSERT_SQL = """
 INSERT INTO dim_experience (
@@ -39,7 +40,7 @@ def run():
     for doc in stream_collection("experiences"):
         d = doc.to_dict() or {}
 
-        host_id = d.get("hostId")
+        host_id = ref_to_id(d.get("hostId"))
         department = d.get("department")
         host_verified = bool(d.get("hostVerified", False))
         is_active = bool(d.get("isActive", False))
