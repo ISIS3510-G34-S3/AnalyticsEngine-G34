@@ -20,7 +20,10 @@ Individual Dashboard Commands:
     streamlit run presentation\dashboard_launcher.py
 
 2. Q7 - Feature Usage Analysis (Least-used features identification):
-    streamlit run presentation\feature_usage_least_often.py
+    Business Question: Which app features (e.g., messaging hosts, filtering by sustainability, calendar booking) are used least often and may need redesign or removal?
+    Type: Type 3 (Feature Analysis)
+    Owner: Andrés Felipe Gómez García
+    Command: streamlit run presentation\feature_usage_least_often.py
 
 3. Q9 - Host Verification Impact Analysis:
     Business Question: How does the host verification feature affect the number of bookings compared to unverified hosts?
@@ -39,6 +42,12 @@ Individual Dashboard Commands:
     Type: Type 4 (External Data Sharing)
     Owner: Santiago Arenas
     Command: streamlit run presentation\q12_regional_offers_public_entities.py
+
+6. Q16 - Device Distribution Monthly:
+    Business Question: What is the distribution of devices where our app is installed on?
+    Type: Type 1 (App Telemetry)
+    Owner: Andrés Felipe Gómez García
+    Command: streamlit run presentation\device_distribution_monthly.py
 
 NOTES:
 - All dashboards include mock data functionality when the database is not available
