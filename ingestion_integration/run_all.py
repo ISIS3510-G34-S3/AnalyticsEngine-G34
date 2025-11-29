@@ -19,6 +19,7 @@ JOBS = [
     "jobs.load_availability",
     "jobs.load_bookings",
     "jobs.load_feature_usage_monthly",
+    "jobs.load_messaging_usage",
 ]
 
 def _env_bool(name, default=False):

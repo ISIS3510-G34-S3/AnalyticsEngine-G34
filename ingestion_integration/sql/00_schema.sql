@@ -37,6 +37,11 @@ CREATE TABLE IF NOT EXISTS fact_feature_usage_monthly (
   PRIMARY KEY (feature_key, yyyymm)
 );
 
+CREATE TABLE IF NOT EXISTS fact_messaging_global_usage (
+  last_chat_started_at TEXT,
+  total_chats_started INT NOT NULL DEFAULT 0
+);
+
 CREATE INDEX IF NOT EXISTS ix_dim_experience_active_dept
   ON dim_experience (is_active, department);
 
