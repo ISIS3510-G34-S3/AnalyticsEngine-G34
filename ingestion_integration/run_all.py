@@ -20,6 +20,7 @@ JOBS = [
     "jobs.load_bookings",
     "jobs.load_feature_usage_monthly",
     "jobs.load_messaging_usage",
+    "jobs.load_experience_skills"
 ]
 
 def _env_bool(name, default=False):

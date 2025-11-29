@@ -49,6 +49,12 @@ Individual Dashboard Commands:
     Owner: Andrés Felipe Gómez García
     Command: streamlit run presentation\device_distribution_monthly.py
 
+7. Q17 - Common Skills in Top Departments:
+   Business Question: What are the most common “skills to learn” in the experiences of the top 5 departments with the highest number of experiences?
+   Type: Type 4 (Benfits from Data)
+   Owner: Andrés Felipe Gómez García
+   Command: streamlit run presentation\skills_top5_departments.py
+
 NOTES:
 - All dashboards include mock data functionality when the database is not available
 - Dashboards are designed for different stakeholder types (product teams, tourism boards, public entities)
